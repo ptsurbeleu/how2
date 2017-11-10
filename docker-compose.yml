@@ -1,0 +1,13 @@
+version: '2'
+services:
+  # Our forms application
+  how2:
+    network_mode: bridge
+    build: "."
+    working_dir: "/src/how2"
+    volumes:
+      - "$PWD:/src/how2"
+
+# Replace npm package: https://stackoverflow.com/questions/35348741/substitute-a-package-in-npm-node#35349155
+# Trace warnings: node --trace-warnings /usr/bin/how2 "stop running process"
+# Fork with some PRs and fixes: https://github.com/Bonnee/how2.git
